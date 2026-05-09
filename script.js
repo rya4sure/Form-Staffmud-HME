@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('peminatan-form');
     const selects = document.querySelectorAll('.departemen-select');
     const successMessage = document.getElementById('success-message');
-    const resetBtn = document.getElementById('reset-btn');
     const submitBtn = document.querySelector('.submit-btn.primary-btn');
 
     const section1 = document.getElementById('section-1');
@@ -169,22 +168,5 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert('Terjadi kesalahan koneksi internet. Silakan coba lagi.');
                 console.error('Error!', error.message);
             });
-    });
-
-    // Reset Flow
-    resetBtn.addEventListener('click', () => {
-        form.reset();
-        updateOptions(); // reset disabled states
-
-        successMessage.classList.add('hidden');
-        form.classList.remove('hidden');
-
-        // Reset to first section
-        section2.classList.add('hidden');
-        submitGroup.classList.add('hidden');
-        section1.classList.remove('hidden');
-
-        // Scroll back to top smoothly
-        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 });

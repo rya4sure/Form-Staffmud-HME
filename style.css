@@ -21,14 +21,20 @@
     padding: 0;
 }
 
+html {
+    height: 100%;
+    overflow: hidden;
+    background-color: #111111; /* Ubah ke gelap agar tidak pernah ada kilatan putih */
+}
+
 body {
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: none;
+    
     font-family: 'Outfit', sans-serif;
-    background: url('bg.png') no-repeat center center fixed;
-    background-size: cover;
-    background-color: var(--bg-main);
-    /* Fallback */
     color: var(--text-main);
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -39,6 +45,19 @@ body {
     /* Sembunyikan scrollbar untuk Firefox & IE */
     -ms-overflow-style: none;
     scrollbar-width: none;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('bg.png') no-repeat center center;
+    background-size: cover;
+    background-color: var(--bg-main);
+    z-index: -1;
 }
 
 /* Sembunyikan scrollbar untuk Chrome, Safari & Opera */
