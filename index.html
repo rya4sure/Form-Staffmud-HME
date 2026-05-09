@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peminatan Perangkat BPH HME</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <div class="container">
+        <header class="form-header">
+            <h1>Peminatan Perangkat BPH HME</h1>
+            <p>Silakan isi form berikut untuk memilih perangkat atau departemen BPH HME. Pastikan pilihan Anda dari urutan prioritas 1 hingga 5.</p>
+        </header>
+
+        <form id="peminatan-form" novalidate>
+            <!-- Data Diri Section -->
+            <section class="form-section active" id="section-1">
+                <h2>Data Diri</h2>
+                
+                <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap Anda" pattern="^[a-zA-Z\s]+$" title="Nama hanya boleh berisi huruf dan spasi" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nim">NIM</label>
+                    <input type="text" id="nim" name="nim" placeholder="Masukkan 9 angka NIM Anda" pattern="^\d{9}$" maxlength="9" title="NIM harus terdiri dari tepat 9 angka" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="kelas">Kelas</label>
+                    <div class="select-wrapper">
+                        <select id="kelas" name="kelas" required>
+                            <option value="" disabled selected>Pilih Kelas</option>
+                            <option value="1A-TEL">1A-TEL</option>
+                            <option value="1B-TEL">1B-TEL</option>
+                            <option value="1A-EK">1A-EK</option>
+                            <option value="1B-EK">1B-EK</option>
+                            <option value="1C-EK">1C-EK</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="submit-btn" id="next-1">Selanjutnya</button>
+                </div>
+            </section>
+
+            <!-- Pilihan Departemen Section 1 & 2 -->
+            <section class="form-section hidden" id="section-2">
+                <h2>Pilihan Perangkat/Departemen (1 - 2)</h2>
+                <p class="section-desc">Pilihan tidak boleh ada yang sama dengan pilihan sebelumnya.</p>
+                
+                <!-- Loop for choices 1 to 5 -->
+                <!-- Pilihan 1 -->
+                <div class="form-group choice-group">
+                    <label for="pilihan-1">Perangkat/Departemen Pilihan 1</label>
+                    <div class="select-wrapper">
+                        <select id="pilihan-1" name="pilihan-1" class="departemen-select" required>
+                            <option value="" disabled selected>Pilih Departemen</option>
+                            <option value="SEKRETARIS/BENDAHARA">SEKRETARIS/BENDAHARA</option>
+                            <option value="DEPARTEMEN DALAM HIMPUNAN">DEPARTEMEN DALAM HIMPUNAN</option>
+                            <option value="DEPARTEMEN SOSIAL DAN AGAMA">DEPARTEMEN SOSIAL DAN AGAMA</option>
+                            <option value="DEPARTEMEN PENGEMBANGAN SUMBER DAYA MAHASISWA">DEPARTEMEN PENGEMBANGAN SUMBER DAYA MAHASISWA</option>
+                            <option value="DEPARTEMEN KOMUNIKASI DAN INFORMASI">DEPARTEMEN KOMUNIKASI DAN INFORMASI</option>
+                        </select>
+                    </div>
+                    <label class="sub-label" for="alasan-1">Alasan Memilih Perangkat/Departemen Tersebut</label>
+                    <textarea id="alasan-1" name="alasan-1" rows="3" placeholder="Jelaskan alasan Anda" required></textarea>
+                </div>
+
+                <!-- Pilihan 2 -->
+                <div class="form-group choice-group">
+                    <label for="pilihan-2">Perangkat/Departemen Pilihan 2</label>
+                    <div class="select-wrapper">
+                        <select id="pilihan-2" name="pilihan-2" class="departemen-select" required>
+                            <option value="" disabled selected>Pilih Departemen</option>
+                            <option value="SEKRETARIS/BENDAHARA">SEKRETARIS/BENDAHARA</option>
+                            <option value="DEPARTEMEN DALAM HIMPUNAN">DEPARTEMEN DALAM HIMPUNAN</option>
+                            <option value="DEPARTEMEN SOSIAL DAN AGAMA">DEPARTEMEN SOSIAL DAN AGAMA</option>
+                            <option value="DEPARTEMEN PENGEMBANGAN SUMBER DAYA MAHASISWA">DEPARTEMEN PENGEMBANGAN SUMBER DAYA MAHASISWA</option>
+                            <option value="DEPARTEMEN KOMUNIKASI DAN INFORMASI">DEPARTEMEN KOMUNIKASI DAN INFORMASI</option>
+                        </select>
+                    </div>
+                    <label class="sub-label" for="alasan-2">Alasan Memilih Perangkat/Departemen Tersebut</label>
+                    <textarea id="alasan-2" name="alasan-2" rows="3" placeholder="Jelaskan alasan Anda" required></textarea>
+                </div>
+
+                <div class="button-group">
+                    <button type="button" class="submit-btn secondary-btn" id="back-1">Kembali</button>
+                    <button type="button" class="submit-btn" id="next-2">Selanjutnya</button>
+                </div>
+            </section>
+
+            <!-- Pilihan Departemen Section 3, 4, 5 -->
+            <section class="form-section hidden" id="section-3">
+                <h2>Pilihan Perangkat/Departemen (3 - 5)</h2>
+                
+                <!-- Pilihan 3 -->
+                <div class="form-group choice-group">
+                    <label for="pilihan-3">Perangkat/Departemen Pilihan 3</label>
+                    <div class="select-wrapper">
+                        <select id="pilihan-3" name="pilihan-3" class="departemen-select" required>
+                            <option value="" disabled selected>Pilih Departemen</option>
+                            <option value="SEKRETARIS/BENDAHARA">SEKRETARIS/BENDAHARA</option>
+                            <option value="DEPARTEMEN DALAM HIMPUNAN">DEPARTEMEN DALAM HIMPUNAN</option>
+                            <option value="DEPARTEMEN SOSIAL DAN AGAMA">DEPARTEMEN SOSIAL DAN AGAMA</option>
+                            <option value="DEPARTEMEN PENGEMBANGAN SUMBER DAYA MAHASISWA">DEPARTEMEN PENGEMBANGAN SUMBER DAYA MAHASISWA</option>
+                            <option value="DEPARTEMEN KOMUNIKASI DAN INFORMASI">DEPARTEMEN KOMUNIKASI DAN INFORMASI</option>
+                        </select>
+                    </div>
+                    <label class="sub-label" for="alasan-3">Alasan Memilih Perangkat/Departemen Tersebut</label>
+                    <textarea id="alasan-3" name="alasan-3" rows="3" placeholder="Jelaskan alasan Anda" required></textarea>
+                </div>
+
+                <!-- Pilihan 4 -->
+                <div class="form-group choice-group">
+                    <label for="pilihan-4">Perangkat/Departemen Pilihan 4</label>
+                    <div class="select-wrapper">
+                        <select id="pilihan-4" name="pilihan-4" class="departemen-select" required>
+                            <option value="" disabled selected>Pilih Departemen</option>
+                            <option value="SEKRETARIS/BENDAHARA">SEKRETARIS/BENDAHARA</option>
+                            <option value="DEPARTEMEN DALAM HIMPUNAN">DEPARTEMEN DALAM HIMPUNAN</option>
+                            <option value="DEPARTEMEN SOSIAL DAN AGAMA">DEPARTEMEN SOSIAL DAN AGAMA</option>
+                            <option value="DEPARTEMEN PENGEMBANGAN SUMBER DAYA MAHASISWA">DEPARTEMEN PENGEMBANGAN SUMBER DAYA MAHASISWA</option>
+                            <option value="DEPARTEMEN KOMUNIKASI DAN INFORMASI">DEPARTEMEN KOMUNIKASI DAN INFORMASI</option>
+                        </select>
+                    </div>
+                    <label class="sub-label" for="alasan-4">Alasan Memilih Perangkat/Departemen Tersebut</label>
+                    <textarea id="alasan-4" name="alasan-4" rows="3" placeholder="Jelaskan alasan Anda" required></textarea>
+                </div>
+
+                <!-- Pilihan 5 -->
+                <div class="form-group choice-group">
+                    <label for="pilihan-5">Perangkat/Departemen Pilihan 5</label>
+                    <div class="select-wrapper">
+                        <select id="pilihan-5" name="pilihan-5" class="departemen-select" required>
+                            <option value="" disabled selected>Pilih Departemen</option>
+                            <option value="SEKRETARIS/BENDAHARA">SEKRETARIS/BENDAHARA</option>
+                            <option value="DEPARTEMEN DALAM HIMPUNAN">DEPARTEMEN DALAM HIMPUNAN</option>
+                            <option value="DEPARTEMEN SOSIAL DAN AGAMA">DEPARTEMEN SOSIAL DAN AGAMA</option>
+                            <option value="DEPARTEMEN PENGEMBANGAN SUMBER DAYA MAHASISWA">DEPARTEMEN PENGEMBANGAN SUMBER DAYA MAHASISWA</option>
+                            <option value="DEPARTEMEN KOMUNIKASI DAN INFORMASI">DEPARTEMEN KOMUNIKASI DAN INFORMASI</option>
+                        </select>
+                    </div>
+                    <label class="sub-label" for="alasan-5">Alasan Memilih Perangkat/Departemen Tersebut</label>
+                    <textarea id="alasan-5" name="alasan-5" rows="3" placeholder="Jelaskan alasan Anda" required></textarea>
+                </div>
+
+            </section>
+
+            <div class="button-group hidden" id="submit-group">
+                <button type="button" class="submit-btn secondary-btn" id="back-2">Kembali</button>
+                <button type="submit" class="submit-btn primary-btn">
+                    <span>Kirim Pendaftaran</span>
+                    <div class="loader"></div>
+                </button>
+            </div>
+        </form>
+
+        <div id="success-message" class="hidden">
+            <div class="success-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+            </div>
+            <h2>Terima Kasih!</h2>
+            <p>Data peminatan Anda telah berhasil disimpan.</p>
+            <button id="reset-btn" class="submit-btn">Kembali Isi Form</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

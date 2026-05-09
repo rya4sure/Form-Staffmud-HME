@@ -1,0 +1,79 @@
+Title: PEMINATAN PERANGKAT BPH HME
+Description: null
+
+Q: Nama
+Type: 0
+
+Q: NIM
+Type: 0
+
+Q: Kelas
+Type: 3
+Options:
+ - 1A-TEL
+ - 1B-TEL
+ - 1A-EK
+ - 1B-EK
+ - 1C-EK
+
+Q: Perangkat/Departemen Pilihan 1
+Type: 3
+Options:
+ - SEKRETARIS/BENDAHARA
+ - DEPARTEMEN DALAM HIMPUNAN
+ - DEPARTEMEN SOSIAL DAN AGAMA
+ - DEPARTEMEN PENGEMBANGAN SUMBER DAYA MAHASISWA
+ - DEPARTEMEN KOMUNIKASI DAN INFORMASI
+
+Q: Alasan Memilih Perangkat/Departemen Tersebut
+Type: 1
+
+Q: Perangkat/Departemen Pilihan 2 (Tidak boleh sama dengan pilihan sebelumnya!)
+Type: 3
+Options:
+ - SEKRETARIS/BENDAHARA
+ - DEPARTEMEN DALAM HIMPUNAN
+ - DEPARTEMEN SOSIAL DAN AGAMA
+ - DEPARTEMEN PENGEMBANGAN SUMBER DAYA MAHASISWA
+ - DEPARTEMEN KOMUNIKASI DAN INFORMASI
+
+Q: Alasan Memilih Perangkat/Departemen Tersebut
+Type: 1
+
+Q: Untitled section
+Type: 8
+
+Q: Perangkat/Departemen Pilihan 3 (Tidak boleh sama dengan pilihan sebelumnya!)
+Type: 3
+Options:
+ - DEPARTEMEN DALAM HIMPUNAN
+ - DEPARTEMEN SOSIAL DAN AGAMA
+ - DEPARTEMEN PENGEMBANGAN SUMBER DAYA MAHASISWA
+ - DEPARTEMEN KOMUNIKASI DAN INFORMASI
+
+Q: Alasan Memilih Perangkat/Departemen Tersebut
+Type: 1
+
+Q: Perangkat/Departemen Pilihan 4 (Tidak boleh sama dengan pilihan sebelumnya!)
+Type: 3
+Options:
+ - SEKRETARIS/BENDAHARA
+ - DEPARTEMEN DALAM HIMPUNAN
+ - DEPARTEMEN SOSIAL DAN AGAMA
+ - DEPARTEMEN PENGEMBANGAN SUMBER DAYA MAHASISWA
+ - DEPARTEMEN KOMUNIKASI DAN INFORMASI
+
+Q: Alasan Memilih Perangkat/Departemen Tersebut
+Type: 1
+
+Q: Perangkat/Departemen Pilihan 5 (Tidak boleh sama dengan pilihan sebelumnya!)
+Type: 3
+Options:
+ - SEKRETARIS/BENDAHARA
+ - DEPARTEMEN DALAM HIMPUNAN
+ - DEPARTEMEN SOSIAL DAN AGAMA
+ - DEPARTEMEN PENGEMBANGAN SUMBER DAYA MAHASISWA
+ - DEPARTEMEN KOMUNIKASI DAN INFORMASI
+
+Q: Alasan Memilih Perangkat/Departemen Tersebut
+Type: 1
