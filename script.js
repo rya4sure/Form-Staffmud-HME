@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('peminatan-form');
+    if (!form) return;
     const selects = document.querySelectorAll('.departemen-select');
     const successMessage = document.getElementById('success-message');
     const submitBtn = document.querySelector('.submit-btn.primary-btn');
