@@ -1,5 +1,50 @@
 document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('peminatan-form');
+    const closedMessage = document.getElementById('closed-message');
+
+    function checkTime() {
+        const now = new Date();
+        const hour = now.getHours();
+        const minute = now.getMinutes();
+
+        // Buka: 17:59, Tutup: 18:06
+        const isOpen = (hour === 17 && minute >= 59) || (hour === 18 && minute < 6);
+
+        if (isOpen) {
+            if (form && form.style.display === 'none') {
+                form.style.display = 'block';
+            }
+            if (closedMessage && closedMessage.style.display !== 'none') {
+                closedMessage.style.display = 'none';
+                closedMessage.classList.add('hidden');
+            }
+        } else {
+            if (form && form.style.display !== 'none') {
+                form.style.display = 'none';
+            }
+            if (closedMessage && closedMessage.style.display === 'none') {
+                closedMessage.style.display = 'block';
+                closedMessage.classList.remove('hidden');
+            }
+            if (closedMessage) {
+                const title = closedMessage.querySelector('h2');
+                const desc = closedMessage.querySelector('p');
+                if (title && desc) {
+                    if (hour < 17 || (hour === 17 && minute < 59)) {
+                        title.textContent = 'Form Belum Dibuka!';
+                        desc.textContent = 'Form akan dibuka pada pukul 17.59 WIB.';
+                    } else {
+                        title.textContent = 'Form Sudah Ditutup!';
+                        desc.textContent = 'Silahkan Chat Contact Person di Bawah!';
+                    }
+                }
+            }
+        }
+    }
+
+    checkTime();
+    setInterval(checkTime, 1000);
+
     if (!form) return;
     const selects = document.querySelectorAll('.departemen-select');
     const successMessage = document.getElementById('success-message');
